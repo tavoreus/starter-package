@@ -1,7 +1,7 @@
 {
   "name": "@tavoreus/starter-package",
   "repository": "https://github.com/tavoreus/starter-package.git",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "main": "index.js",
   "license": "MIT",
   "devDependencies": {

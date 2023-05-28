@@ -13,7 +13,7 @@
 /out/
 
 # production
-/build
+# /build
 
 # misc
 .DS_Store
@@ -29,4 +29,4 @@ yarn-error.log*
 .env.test.local
 .env.production.local
 
-storybook-static
+# storybook-static
