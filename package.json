@@ -1,8 +1,8 @@
 {
   "name": "@tavoreus/starter-package",
   "repository": "https://github.com/tavoreus/starter-package.git",
-  "version": "1.0.5",
-  "main": "index.js",
+  "version": "1.0.6",
+  "main": "dist/index.js",
   "license": "MIT",
   "babel": {
     "presets": [
