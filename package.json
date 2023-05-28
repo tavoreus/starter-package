@@ -1,7 +1,7 @@
 {
   "name": "@tavoreus/starter-package",
   "repository": "https://github.com/tavoreus/starter-package.git",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "main": "index.js",
   "license": "MIT",
   "devDependencies": {
@@ -31,6 +31,7 @@
   },
   "scripts": {
     "storybook": "start-storybook -p 6006",
+    "build": "rm -rf dist && NODE_ENV=production babel lib --out-dir dist --copy-files",
     "build-storybook": "build-storybook"
   }
 }
