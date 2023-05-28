@@ -1,3 +1,5 @@
+import React from "react";
+
 export default function Arrow({ className, color = "#025450" }) {
   return (
     <svg

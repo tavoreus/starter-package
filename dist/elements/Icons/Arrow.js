@@ -1,20 +1,22 @@
 "use strict";
 
+var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault")["default"];
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports["default"] = Arrow;
+var _react = _interopRequireDefault(require("react"));
 function Arrow(_ref) {
   var className = _ref.className,
     _ref$color = _ref.color,
     color = _ref$color === void 0 ? "#025450" : _ref$color;
-  return /*#__PURE__*/React.createElement("svg", {
+  return /*#__PURE__*/_react["default"].createElement("svg", {
     width: "14",
     height: "14",
     viewBox: "0 0 14 14",
     className: "inline",
     xmlns: "http://www.w3.org/2000/svg"
-  }, /*#__PURE__*/React.createElement("path", {
+  }, /*#__PURE__*/_react["default"].createElement("path", {
     fill: color,
     fillRule: "evenodd",
     clipRule: "evenodd",
