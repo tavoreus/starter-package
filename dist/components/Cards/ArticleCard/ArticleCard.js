@@ -15,7 +15,7 @@ var ArticleCard = function ArticleCard(_ref) {
   return /*#__PURE__*/_react["default"].createElement("div", {
     className: "ArticleCard"
   }, /*#__PURE__*/_react["default"].createElement("img", {
-    src: require("../../../assets/".concat(image)),
+    src: image,
     alt: "asd",
     className: "w-72 rounded-3xl"
   }), /*#__PURE__*/_react["default"].createElement("p", {
