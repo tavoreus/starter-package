@@ -1,10 +1,21 @@
 {
   "name": "@tavoreus/starter-package",
   "repository": "https://github.com/tavoreus/starter-package.git",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "main": "index.js",
   "license": "MIT",
+  "babel": {
+    "presets": [
+      [
+        "react-app",
+        {
+          "absoluteRuntime": false
+        }
+      ]
+    ]
+  },
   "devDependencies": {
+    "@babel/cli": "^7.21.5",
     "@babel/core": "^7.21.0",
     "@storybook/addon-actions": "^6.5.16",
     "@storybook/addon-essentials": "^6.5.16",
@@ -17,6 +28,7 @@
     "@storybook/testing-library": "^0.0.13",
     "autoprefixer": "^10.4.13",
     "babel-loader": "^8.3.0",
+    "cross-env": "^7.0.3",
     "postcss": "^8.4.21",
     "postcss-loader": "^7.0.2",
     "prettier": "^2.8.4",
@@ -31,7 +43,13 @@
   },
   "scripts": {
     "storybook": "start-storybook -p 6006",
-    "build": "rm -rf dist && NODE_ENV=production babel lib --out-dir dist --copy-files",
+    "build": "cross-env BABEL_ENV=production babel src -d dist",
+    "build-h": "rm -rf dist && NODE_ENV=production babel lib --out-dir dist --copy-files",
     "build-storybook": "build-storybook"
+  },
+  "author": "tavoreus <tavo_reus@hotmail.com>",
+  "private": false,
+  "dependencies": {
+    "babel-preset-react-app": "^10.0.1"
   }
 }

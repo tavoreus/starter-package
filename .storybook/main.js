@@ -1,5 +1,3 @@
-const path = require("path");
-
 module.exports = {
   stories: ["../src/**/*.stories.mdx", "../src/**/*.stories.@(js|jsx|ts|tsx)"],
   addons: [
@@ -20,11 +18,5 @@ module.exports = {
     },
   ],
   framework: "@storybook/react",
-  staticDirs: [
-    {
-      directory: path.resolve(__dirname, "../src"),
-      staticPath: "./src",
-      watch: true,
-    },
-  ],
+  staticDirs: ["../public"],
 };
