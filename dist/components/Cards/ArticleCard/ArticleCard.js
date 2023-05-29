@@ -13,7 +13,7 @@ var ArticleCard = function ArticleCard(_ref) {
     image = _ref.image,
     readingTime = _ref.readingTime;
   return /*#__PURE__*/_react["default"].createElement("div", {
-    className: "ArticleCard"
+    className: "ArticleCard m-4"
   }, /*#__PURE__*/_react["default"].createElement("img", {
     src: image,
     alt: "asd",
