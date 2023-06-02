@@ -1,45 +1,81 @@
 "use strict";
 
-// import addPlugin from "tailwindcss/plugin";
-// import aspectRatioPlugin from "@tailwindcss/aspect-ratio";
-
-// const BASE_FONT_SIZE_PX = 10;
-
-// const noop = (val) => val;
-// const unitToPx = (val) => `${val}px`;
-// const unitToRem = (val) => `${val}rem`;
-// const pxToRem = (val) => val / BASE_FONT_SIZE_PX;
-// const pxUnitToRem = (val) => unitToRem(pxToRem(val));
-
-// const createScale = ({
-//   min = 0,
-//   max = 100,
-//   steps = 1,
-//   formatVal = noop,
-//   formatKey = noop,
-// }) => {
-//   const limit = Math.round((max - min) / steps);
-//   const scale = [...new Array(limit + 1)].map((_, i) => min + i * steps);
-
-//   return scale.reduce((prev, curr) => {
-//     const key = String(formatKey(curr));
-//     const val = curr === 0 ? curr : formatVal(curr);
-//     return { ...prev, [key]: val };
-//   }, {});
-// };
-
-// const spacing = {
-//   ...createScale({ max: 32, steps: 1, formatVal: pxUnitToRem }),
-//   ...createScale({ min: 32, max: 64, steps: 2, formatVal: pxUnitToRem }),
-//   ...createScale({ min: 68, max: 128, steps: 4, formatVal: pxUnitToRem }),
-//   ...createScale({ min: 136, max: 256, steps: 8, formatVal: pxUnitToRem }),
-//   ...createScale({ min: 272, max: 512, steps: 16, formatVal: pxUnitToRem }),
-//   ...createScale({ min: 544, max: 1024, steps: 32, formatVal: pxUnitToRem }),
-// };
-
+var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault")["default"];
+var _defineProperty2 = _interopRequireDefault(require("@babel/runtime/helpers/esm/defineProperty"));
+var _objectSpread3 = _interopRequireDefault(require("@babel/runtime/helpers/esm/objectSpread2"));
+var _toConsumableArray2 = _interopRequireDefault(require("@babel/runtime/helpers/esm/toConsumableArray"));
+var addPlugin = require("tailwindcss/plugin");
+var aspectRatioPlugin = require("@tailwindcss/aspect-ratio");
+var BASE_FONT_SIZE_PX = 10;
+var noop = function noop(val) {
+  return val;
+};
+var unitToPx = function unitToPx(val) {
+  return "".concat(val, "px");
+};
+var unitToRem = function unitToRem(val) {
+  return "".concat(val, "rem");
+};
+var pxToRem = function pxToRem(val) {
+  return val / BASE_FONT_SIZE_PX;
+};
+var pxUnitToRem = function pxUnitToRem(val) {
+  return unitToRem(pxToRem(val));
+};
+var createScale = function createScale(_ref) {
+  var _ref$min = _ref.min,
+    min = _ref$min === void 0 ? 0 : _ref$min,
+    _ref$max = _ref.max,
+    max = _ref$max === void 0 ? 100 : _ref$max,
+    _ref$steps = _ref.steps,
+    steps = _ref$steps === void 0 ? 1 : _ref$steps,
+    _ref$formatVal = _ref.formatVal,
+    formatVal = _ref$formatVal === void 0 ? noop : _ref$formatVal,
+    _ref$formatKey = _ref.formatKey,
+    formatKey = _ref$formatKey === void 0 ? noop : _ref$formatKey;
+  var limit = Math.round((max - min) / steps);
+  var scale = (0, _toConsumableArray2["default"])(new Array(limit + 1)).map(function (_, i) {
+    return min + i * steps;
+  });
+  return scale.reduce(function (prev, curr) {
+    var key = String(formatKey(curr));
+    var val = curr === 0 ? curr : formatVal(curr);
+    return (0, _objectSpread3["default"])((0, _objectSpread3["default"])({}, prev), {}, (0, _defineProperty2["default"])({}, key, val));
+  }, {});
+};
+var spacing = (0, _objectSpread3["default"])((0, _objectSpread3["default"])((0, _objectSpread3["default"])((0, _objectSpread3["default"])((0, _objectSpread3["default"])((0, _objectSpread3["default"])({}, createScale({
+  max: 32,
+  steps: 1,
+  formatVal: pxUnitToRem
+})), createScale({
+  min: 32,
+  max: 64,
+  steps: 2,
+  formatVal: pxUnitToRem
+})), createScale({
+  min: 68,
+  max: 128,
+  steps: 4,
+  formatVal: pxUnitToRem
+})), createScale({
+  min: 136,
+  max: 256,
+  steps: 8,
+  formatVal: pxUnitToRem
+})), createScale({
+  min: 272,
+  max: 512,
+  steps: 16,
+  formatVal: pxUnitToRem
+})), createScale({
+  min: 544,
+  max: 1024,
+  steps: 32,
+  formatVal: pxUnitToRem
+}));
 module.exports = {
   utils: {
-    // pxRem: pxUnitToRem,
+    pxRem: pxUnitToRem
   },
   preset: {
     theme: {
@@ -103,21 +139,20 @@ module.exports = {
         }
       },
       extend: {
-        // spacing,
-        // zIndex: {
-        //   behind: -1,
-        // },
+        spacing: spacing,
+        zIndex: {
+          behind: -1
+        }
       }
     },
-    plugins: [
-      // aspectRatioPlugin,
-      // addPlugin(function ({ addBase, theme }) {
-      //   addBase({
-      //     ":root": {
-      //       fontSize: unitToPx(BASE_FONT_SIZE_PX),
-      //     },
-      //   });
-      // }),
-    ]
+    plugins: [aspectRatioPlugin, addPlugin(function (_ref2) {
+      var addBase = _ref2.addBase,
+        theme = _ref2.theme;
+      addBase({
+        ":root": {
+          fontSize: unitToPx(BASE_FONT_SIZE_PX)
+        }
+      });
+    })]
   }
 };
