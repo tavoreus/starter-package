@@ -11,10 +11,12 @@ var Button = function Button(_ref) {
   var label = _ref.label,
     leftIcon = _ref.leftIcon,
     rightIcon = _ref.rightIcon,
-    handleClick = _ref.handleClick;
+    handleClick = _ref.handleClick,
+    className = _ref.className;
+  var buttonStyles = "mavie-bg-yellow-dark mavie-text-green-dark rounded-3xl p-2 " + className;
   return /*#__PURE__*/_react["default"].createElement("button", {
     onClick: handleClick,
-    className: "mavie-bg-yellow-dark mavie-text-green-dark rounded-3xl p-2"
+    className: buttonStyles
   }, leftIcon && /*#__PURE__*/_react["default"].createElement(_Icon["default"], {
     name: leftIcon
   }), label, rightIcon && /*#__PURE__*/_react["default"].createElement(_Icon["default"], {

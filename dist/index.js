@@ -25,10 +25,10 @@ Object.defineProperty(exports, "Tag", {
 Object.defineProperty(exports, "tailwindConfig", {
   enumerable: true,
   get: function get() {
-    return _tailwindMavieConfig["default"];
+    return _tailwindMConfig["default"];
   }
 });
-var _tailwindMavieConfig = _interopRequireDefault(require("./themes/tailwind.mavie.config.js"));
+var _tailwindMConfig = _interopRequireDefault(require("./themes/tailwind.m.config.js"));
 var _Button = _interopRequireDefault(require("./elements/Button/Button"));
 var _Tag = _interopRequireDefault(require("./elements/Tag/Tag"));
 var _ArticleCard = _interopRequireDefault(require("./components/Cards/ArticleCard/ArticleCard"));
