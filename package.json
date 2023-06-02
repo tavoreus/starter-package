@@ -1,7 +1,7 @@
 {
   "name": "@tavoreus/starter-package",
   "repository": "https://github.com/tavoreus/starter-package.git",
-  "version": "1.0.13",
+  "version": "1.0.14",
   "main": "dist/index.js",
   "license": "MIT",
   "babel": {
@@ -49,6 +49,7 @@
   "author": "tavoreus <tavo_reus@hotmail.com>",
   "private": false,
   "dependencies": {
+    "@tailwindcss/aspect-ratio": "^0.4.2",
     "babel-preset-react-app": "^10.0.1"
   }
 }
