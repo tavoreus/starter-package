@@ -1,3 +1,5 @@
+/** @type {import('tailwindcss').Config} */
+
 const addPlugin = require("tailwindcss/plugin");
 const aspectRatioPlugin = require("@tailwindcss/aspect-ratio");
 
