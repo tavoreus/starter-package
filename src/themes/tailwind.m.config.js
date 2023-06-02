@@ -1,7 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 
-import addPlugin from "tailwindcss/plugin";
-import aspectRatioPlugin from "@tailwindcss/aspect-ratio";
+// import addPlugin from "tailwindcss/plugin";
+// import aspectRatioPlugin from "@tailwindcss/aspect-ratio";
 
 const BASE_FONT_SIZE_PX = 10;
 
@@ -110,14 +110,14 @@ module.exports = {
       },
     },
     plugins: [
-      aspectRatioPlugin,
-      addPlugin(function ({ addBase, theme }) {
-        addBase({
-          ":root": {
-            fontSize: unitToPx(BASE_FONT_SIZE_PX),
-          },
-        });
-      }),
+      // aspectRatioPlugin,
+      // addPlugin(function ({ addBase, theme }) {
+      //   addBase({
+      //     ":root": {
+      //       fontSize: unitToPx(BASE_FONT_SIZE_PX),
+      //     },
+      //   });
+      // }),
     ],
   },
 };
