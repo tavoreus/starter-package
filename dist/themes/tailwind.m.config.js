@@ -4,10 +4,10 @@ var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefau
 var _defineProperty2 = _interopRequireDefault(require("@babel/runtime/helpers/esm/defineProperty"));
 var _objectSpread3 = _interopRequireDefault(require("@babel/runtime/helpers/esm/objectSpread2"));
 var _toConsumableArray2 = _interopRequireDefault(require("@babel/runtime/helpers/esm/toConsumableArray"));
+var _plugin = _interopRequireDefault(require("tailwindcss/plugin"));
+var _aspectRatio = _interopRequireDefault(require("@tailwindcss/aspect-ratio"));
 /** @type {import('tailwindcss').Config} */
 
-var addPlugin = require("tailwindcss/plugin");
-var aspectRatioPlugin = require("@tailwindcss/aspect-ratio");
 var BASE_FONT_SIZE_PX = 10;
 var noop = function noop(val) {
   return val;
@@ -147,7 +147,7 @@ module.exports = {
         }
       }
     },
-    plugins: [aspectRatioPlugin, addPlugin(function (_ref2) {
+    plugins: [_aspectRatio["default"], (0, _plugin["default"])(function (_ref2) {
       var addBase = _ref2.addBase,
         theme = _ref2.theme;
       addBase({

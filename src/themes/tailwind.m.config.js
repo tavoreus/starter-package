@@ -1,7 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 
-const addPlugin = require("tailwindcss/plugin");
-const aspectRatioPlugin = require("@tailwindcss/aspect-ratio");
+import addPlugin from "tailwindcss/plugin";
+import aspectRatioPlugin from "@tailwindcss/aspect-ratio";
 
 const BASE_FONT_SIZE_PX = 10;
 
